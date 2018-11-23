@@ -1,5 +1,12 @@
 const TeleBot = require('telebot');
-const bot = new TeleBot('');
+var TOKEN = ""
+
+if(TOKEN == "")
+{
+    TOKEN = process.env.TOKEN
+}
+
+const bot = new TeleBot(TOKEN);
 const log = console.log
 const dataFile = require('./data')
 const data = dataFile.Data
