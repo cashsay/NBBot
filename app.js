@@ -27,6 +27,7 @@ bot.on(['/start'], (msg) => {
 
 bot.on(['/yiyan','/sao'], (msg) => {
     TEXT = data[getRandomInt(length)]
+    console.log("Send ----> " + TEXT)
     return bot.sendMessage(msg.chat.id, TEXT, { replyToMessage: msg.message_id });
 });
 
